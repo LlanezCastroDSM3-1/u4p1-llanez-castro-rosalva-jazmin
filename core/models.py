@@ -20,6 +20,8 @@ class Servicio(models.Model):
 
     # categoria: texto corto para clasificar el servicio (ej. "Tutorías", "Diseño")
     categoria = models.CharField(max_length=60)
+     # disponible: casilla Sí/No; default=True marca como disponibles los servicios que ya existen
+    disponible = models.BooleanField(default=True)
 
     # creado_en: Django guarda automáticamente la fecha y hora cuando se crea el registro
     creado_en = models.DateTimeField(auto_now_add=True)

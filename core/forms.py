@@ -16,8 +16,8 @@ class ServicioForm(forms.ModelForm):
         # Modelo del que se generan los campos
         model = Servicio
 
-        # Campos que aparecerán en el formulario
-        fields = ['titulo', 'descripcion', 'precio', 'categoria']
+         # fields: ahora incluye disponible, que se dibuja como casilla en Crear y Editar
+        fields = ['titulo', 'descripcion', 'precio', 'categoria', 'disponible']
 
     # Validación personalizada del precio
     def clean_precio(self):
